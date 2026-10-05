@@ -350,6 +350,7 @@ typedef void (*pSAI_CallbackTypeDef)(SAI_HandleTypeDef *hsai);
 /** @defgroup SAI_Audio_Frequency SAI Audio Frequency
   * @{
   */
+#define SAI_AUDIO_FREQUENCY_384K          384000U
 #define SAI_AUDIO_FREQUENCY_192K          192000U
 #define SAI_AUDIO_FREQUENCY_96K           96000U
 #define SAI_AUDIO_FREQUENCY_48K           48000U
@@ -837,7 +838,8 @@ uint32_t HAL_SAI_GetError(const SAI_HandleTypeDef *hsai);
                                               ((DATASIZE) == SAI_PROTOCOL_DATASIZE_24BIT)         ||\
                                               ((DATASIZE) == SAI_PROTOCOL_DATASIZE_32BIT))
 
-#define IS_SAI_AUDIO_FREQUENCY(AUDIO) (((AUDIO) == SAI_AUDIO_FREQUENCY_192K) || \
+#define IS_SAI_AUDIO_FREQUENCY(AUDIO) (((AUDIO) == SAI_AUDIO_FREQUENCY_384K) || \
+                                       ((AUDIO) == SAI_AUDIO_FREQUENCY_192K) || \
                                        ((AUDIO) == SAI_AUDIO_FREQUENCY_96K)  || \
                                        ((AUDIO) == SAI_AUDIO_FREQUENCY_48K)  || \
                                        ((AUDIO) == SAI_AUDIO_FREQUENCY_44K)  || \
