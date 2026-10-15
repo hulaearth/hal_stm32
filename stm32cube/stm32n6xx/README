@@ -79,4 +79,9 @@ Patch List:
        drivers/src/stm32n6xx_hal_mdf.c
      ST Internal Reference: HAL1-27843
 
+   *Accept 384 kHz SAI audio frequency
+     Add the frequency constant and allow it in HAL parameter validation.
+    Impacted files:
+     drivers/include/stm32n6xx_hal_sai.h
+
    See release_note.html from STM32Cube
